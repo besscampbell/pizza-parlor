@@ -14,11 +14,11 @@
       <p class="lead">CALL US @ WE-EAT-PIZZA ---> (933) 287-4992</p>
     </div>
   </div>
-  <div class="container">
-    <h1>Build your pie:</h1>
+  <div class="container" id="pizza">
     <form id="pizza-order">
+      <h1>Build your pie:</h1>
       <!--Toppings-->
-      <div class="form-group-1">
+      <div class="form-group-1 pt-5">
         <h3>PICK YOUR TOPPINGS</h3>
         <div class="form-row">
           <div class="col-4">
@@ -42,20 +42,23 @@
         </div>
       </div>
       <!--Size-->
-      <div class="form-group-2">
+      <div class="form-group-2 pt-5">
         <h3>SIZE</h3>
-        <select class="form-control" id="pizza-size">
+        <select class="form-control col-md-3" id="pizza-size">
           <option value="10">Personal</option>
           <option value="15">Family</option>
           <option value="20">Extended Family</option>
           <option value="8">Calzone</option>
         </select>
       </div>
-      <button type="submit" class="button" id="pizza-btn">PIZZA</button>
+      <div class="button pt-5">
+        <button type="submit" class="button" id="place-order">Place order</button>
+      </div>  
     </form>
-    <span id="pizza-total">
-      <p>Your total will be:</p>
-    </span>
   </div>
+  <div class="container" id="pizza-receipt"> 
+    <h3>Your total will be:<span id="pizza-total"></span></h3>
+    <p>Would you like<button type="button" class="button" id="another-pizza">Another PIZZA?</button></p>
+  </div>  
 </body>
 </html>
