@@ -22,13 +22,13 @@
 
 ## Testing
  
- Describe: calcualteCost()
+ Describe: Pizza.prototype.calcualteCost()
 
  Test: "It should charge the guest for a small pizza if the guest orders a small." 
  Expect: (calculateCost(small)).toEqual(+10)
 
  Test: "It should charge the guest for 3 toppings when they choose three toppings." 
- Expect: (calculateCost(3)).toEqual(+(3*3)) 
+ Expect: (calculateCost(3)).toEqual(+(3*2)) 
 
 
 
