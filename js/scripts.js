@@ -19,9 +19,9 @@ PizzaOrder.prototype.addPizza = function(pizza) {
 }
 
 PizzaOrder.prototype.grandTotal = function() {
-  for (let i = 0; i< this.pizzas.length; i++) {
   let grandTotal = 0
-  grandTotal = grandTotal + this.pizzas.cost
+  for (let i = 0; i< this.pizzas.length; i++) {
+    grandTotal += this.pizzas[i].cost
   }
   return grandTotal;
 }
