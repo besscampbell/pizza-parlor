@@ -14,10 +14,16 @@ function PizzaOrder () {
   this.pizzas = []
 }
 
+PizzaOrder.prototype.addPizza = function(pizza) {
+  this.pizzas.push(pizza);
+}
+
 PizzaOrder.prototype.grandTotal = function() {
-  this.forEach(function(element){
-    let grandTotal = grandTotal + this.element.cost
-  })
+  for (let i = 0; i< this.pizzas.length; i++) {
+  let grandTotal = 0
+  grandTotal = grandTotal + this.pizzas.cost
+  }
+  return grandTotal;
 }
 
 
