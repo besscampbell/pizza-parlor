@@ -19,7 +19,6 @@
 * Once it has downloaded, open the file
 * Double-click the 'index.html' file or open the file in your browser
 
-
 ## Testing
  
  Describe: Pizza.prototype.calcualteCost()
@@ -30,6 +29,15 @@
  Test: "It should charge the guest for 3 toppings when they choose three toppings." 
  Expect: (calculateCost(3)).toEqual(+(3*2)) 
 
+ Describe: PizzaOrder.prototype.addPizza()
+ 
+ Test: "It should push the pizzas into the pizza order constructor."
+ Expect: (.addPizza(pizza1)).toEqual(pizzaOrder.pizza1)
+
+ Describe: PizzaOrder.prototype.grandTotal()
+
+ Test: "It should calculate the total of one pizza that costs $26 and another pizza that cost $18."
+ Expect: (grandTotal(26+18)).toEqual(44)
 
 
 ## Known Bugs

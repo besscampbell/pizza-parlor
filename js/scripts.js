@@ -1,4 +1,4 @@
-// Business Logic------
+// Business Logic for Pizza------
 function Pizza (toppings, size, cost) {
   this.toppings = toppings;
   this. size = size;
@@ -9,11 +9,25 @@ Pizza.prototype.calculateCost = function() {
    this.cost = (this.toppings.length * 2) + this.size
 }
 
+// Business Logic for Pizza Orders----
+function PizzaOrder () {
+  this.pizzas = []
+}
+
+PizzaOrder.prototype.grandTotal = function() {
+  this.forEach(function(element){
+    let grandTotal = grandTotal + this.element.cost
+  })
+}
+
+
+
 // User Interface Logic------
-$(document).ready(function(){
+$(document).ready(function(){  
   $("#pizza-order").submit(function(event){
     event.preventDefault();
-    $("#pizza-total").show();
+    $("#pizza-receipt").toggle();
+    $("#pizza-order").hide();
     let pizza = new Pizza();
     pizza.toppings = []
     $("input:checkbox[name=topping]:checked").each(function(){
@@ -22,7 +36,13 @@ $(document).ready(function(){
     });
     pizza.size = parseInt($("#pizza-size").val());
     pizza.calculateCost();
-    console.log(pizza);
     $("#pizza-total").text("$" + pizza.cost);
+  });   
+  $("#another-pizza").click(function(){
+    $("#pizza-receipt").toggle();
+    $("#pizza-order").show().trigger(reset);
+    $("input:checkbox[name=topping]:checked").each(function(){
+      const pizzaTopper = $(this).val("");
+    });
   });
 });
