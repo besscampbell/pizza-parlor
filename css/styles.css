@@ -37,3 +37,7 @@
 #pizza-receipt {
   display: none;
 }
+
+body {
+  background: linear-gradient(180deg,  #d9e7ff 0%, #e3ffe7 100%);
+}
