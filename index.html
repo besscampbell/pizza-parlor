@@ -61,7 +61,32 @@
     <h3>Pizzas in your order:</h3>
         <ul id="pizzas">
         </ul>
-    <p>Would you like<button type="button" class="button" id="another-pizza">Another PIZZA?</button></p>
+    <div id="checkout-questions">  
+      <p>Would you like<button type="button" class="button" id="another-pizza">Another PIZZA?</button> or are you ready to <button type="button" class="button" id="checkout">CHECK- OUT</button></p>
+    </div>
+  </div>
+  <div class="container" id="order-info">
+    <h1>Please enter your delivery information:</h1>
+    <div>
+      <form id="customer-info">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" class="form-control col-md-6" type="text">
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input id="address" class="form-control col-md-6" type="text">
+        </div>
+        <div class="form-group">
+          <label for="address-two">Address 2:</label>
+          <input id="address-two" class="form-control col-md-6" type="text">
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Phone Number:</label>
+          <input id="phone-number" class="form-control col-md-6" type="text">
+        </div>
+      </form>
+    </div>  
   </div>  
 </body>
 </html>

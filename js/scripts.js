@@ -62,4 +62,8 @@ $(document).ready(function(){
     $("#pizza-receipt").toggle();
     $("#pizza-order").show().trigger("reset");
   });
+  $("#checkout").click(function(){
+    $("#checkout-questions").hide();
+    $("#order-info").show();
+  });
 });
