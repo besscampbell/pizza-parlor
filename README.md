@@ -39,7 +39,6 @@
  Test: "It should calculate the total of one pizza that costs $26 and another pizza that cost $18."
  Expect: (grandTotal(26+18)).toEqual(44)
 
-
 ## Known Bugs
 
  No known bugs. 
