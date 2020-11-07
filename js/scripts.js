@@ -54,7 +54,6 @@ $(document).ready(function(){
     pizza.calculateCost();
     pizzaOrder.addPizza(pizza);
     const total = pizzaOrder.grandTotal();
-    console.log(pizzaOrder);
     $("#pizza-total").text("$" + total);
     displayPizza(pizzaOrder);
   });   
