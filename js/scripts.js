@@ -1,8 +1,8 @@
 // Business Logic for Pizza------
 function Pizza (toppings, size, cost) {
-  this.toppings = toppings;
+  this.toppings = [];
   this. size = size;
-  this.cost = cost;
+  this.cost = 0;
 }
 
 Pizza.prototype.calculateCost = function() {
@@ -12,6 +12,7 @@ Pizza.prototype.calculateCost = function() {
 // Business Logic for Pizza Orders----
 function PizzaOrder () {
   this.pizzas = [];
+  this.total = 0;
 }
 
 PizzaOrder.prototype.addPizza = function(pizza) {
@@ -19,16 +20,16 @@ PizzaOrder.prototype.addPizza = function(pizza) {
 }
 
 PizzaOrder.prototype.grandTotal = function() {
-  let grandTotal = 0;
+  this.total = 0;
   for (let i = 0; i< this.pizzas.length; i++) {
-    grandTotal += this.pizzas[i].cost;
+    this.total += this.pizzas[i].cost;
   }
-  return grandTotal;
+  return this.total;
 }
 
 
 // User Interface Logic------
-let pizzaOrder = new PizzaOrder();
+let pizzaOrder = new PizzaOrder(0);
 
 function displayPizza(pizzaOrder) {
   let pizzaList = $("ul#pizzas");
@@ -45,15 +46,17 @@ $(document).ready(function(){
     $("#pizza-receipt").toggle();
     $("#pizza-order").hide();
     let pizza = new Pizza();
-    pizza.toppings = [];
     $("input:checkbox[name=topping]:checked").each(function(){
       const pizzaTopper = $(this).val();
       pizza.toppings.push(pizzaTopper);
+      console.log(pizzaTopper);
     });
     pizza.size = parseInt($("#pizza-size").val());
     pizza.calculateCost();
     pizzaOrder.addPizza(pizza);
-    const total = pizzaOrder.grandTotal();
+    pizzaOrder.grandTotal();
+    const total = pizzaOrder.total;
+    console.log(pizzaOrder.total);
     $("#pizza-total").text("$" + total);
     displayPizza(pizzaOrder);
   });   
