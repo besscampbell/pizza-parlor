@@ -21,13 +21,28 @@
 
 ## Testing
  
+ Describe: Pizza()
+
+ Test: "It should create a pizza object using the constructor."
+ let pizza = new Pizza(["cheese", "sausage", "black-olive"], 20, 0)
+ Expect: (pizza.toppings).toEqual(["cheese", "sausage", "black-olive"]);
+ Expect: (pizza.size).toEqual(20);
+ Expect: (pizza.cost).toEqual(0);
+
  Describe: Pizza.prototype.calcualteCost()
 
  Test: "It should charge the guest for a small pizza if the guest orders a small." 
- Expect: (calculateCost(small)).toEqual(+10)
+ Expect: (calculateCost(small)).toEqual(+10);
 
  Test: "It should charge the guest for 3 toppings when they choose three toppings." 
- Expect: (calculateCost(3)).toEqual(+(3*2)) 
+ Expect: (calculateCost(3)).toEqual(+(3*2)); 
+
+ Describe: PizzaOrder()
+
+ Test: "It should create a pizza order using the constructor"
+ let pizzaOrder = new Pizza();
+ Expect: (pizzaOrder.pizzas).toEqual([]);
+ Expect: (pizzaOrder.total).toEqual(0);
 
  Describe: PizzaOrder.prototype.addPizza()
  
