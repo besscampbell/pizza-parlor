@@ -49,14 +49,12 @@ $(document).ready(function(){
     $("input:checkbox[name=topping]:checked").each(function(){
       const pizzaTopper = $(this).val();
       pizza.toppings.push(pizzaTopper);
-      console.log(pizzaTopper);
     });
     pizza.size = parseInt($("#pizza-size").val());
     pizza.calculateCost();
     pizzaOrder.addPizza(pizza);
     pizzaOrder.grandTotal();
     const total = pizzaOrder.total;
-    console.log(pizzaOrder.total);
     $("#pizza-total").text("$" + total);
     displayPizza(pizzaOrder);
   });   
