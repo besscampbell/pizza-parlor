@@ -24,9 +24,7 @@ PizzaOrder.prototype.grandTotal = function() {
   for (let i = 0; i< this.pizzas.length; i++) {
     this.total += this.pizzas[i].cost;
   }
-  return this.total;
 }
-
 
 // User Interface Logic------
 let pizzaOrder = new PizzaOrder(0);
@@ -54,8 +52,7 @@ $(document).ready(function(){
     pizza.calculateCost();
     pizzaOrder.addPizza(pizza);
     pizzaOrder.grandTotal();
-    const total = pizzaOrder.total;
-    $("#pizza-total").text("$" + total);
+    $("#pizza-total").text("$" + pizzaOrder.total);
     displayPizza(pizzaOrder);
   });   
   $("#another-pizza").click(function(){
