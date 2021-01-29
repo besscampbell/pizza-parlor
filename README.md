@@ -17,7 +17,12 @@
 * Click on the green 'Code' button 
 * Choose the Download ZIP option
 * Once it has downloaded, open the file
-* Double-click the 'index.html' file or open the file in your browser
+* Double-click the 'index.html' file or open the file in your browser  
+ -or- 
+* Paste https://besscampbell.github.io/pizza-parlor/ into the browser  
+ -or- 
+* Follow this link [Georgie's Pizza Parlor](https://besscampbell.github.io/pizza-parlor/)
+
 
 ## Testing
  
